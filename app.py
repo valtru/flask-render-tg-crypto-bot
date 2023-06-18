@@ -43,7 +43,7 @@ def notify():
         value = str(round(logs['event']['activity'][0]['value']))
 
         # create the text string
-        message = f'*Date: {datetime.datetime.now().strftime('%Y-%m-%d/%H:%M:%S')}*\n*Token transfer:*\n{txhash}\nfrom {from_address} \nto {to_address}: \nvalue: {value} *{token_symbol}* {token_address}'
+        message = f'*Date: {datetime.datetime.now().strftime("%Y-%m-%d/%H:%M:%S")}*\n*Token transfer:*\n{txhash}\nfrom {from_address} \nto {to_address}: \nvalue: {value} *{token_symbol}* {token_address}'
         bot.send_message(chat_id=user_chat_id, text=message, parse_mode='MarkdownV2')
       
   return Response(status=200)
